@@ -189,6 +189,11 @@ def load_model():
         classifier = pickle.load(model_file)
     return vectorizer, classifier
                         
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+db_name = os.getenv("DB_NAME")
 
 
 if __name__ == '__main__':

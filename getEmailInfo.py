@@ -163,7 +163,7 @@ def analyze_email(body):
 
     print(f"Extracted company: {company} and position: {position}")
     #keyword-based approach to detect status
-    if any(keyword in doc.text.lower() for keyword in ['unfortunetely', 'other candidates', 'thank you for your interest', 'have decided not', ]):
+    if any(keyword in doc.text.lower() for keyword in ['unfortunetely', 'other candidates', 'thank you for your interest', 'have decided not', 'we wont be able to', 'at this time']):
         status = "Denied"
     elif any(keyword in doc.text.lower() for keyword in ['congratulations', 'we are pleased', 'offer']):
         status = "Position Offered"
